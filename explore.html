@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eighth Note Lyrics</title>
+    <link rel="stylesheet" href="lyricsstyle.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <a href="https://www.freevector.com/vector-headphones-illustration"></a>
+    <a href="https://www.freevector.com/live-concert-vector"></a>
+    <a href="https://www.freevector.com/vinyl-record-player"></a>
+    <a href="https://www.vecteezy.com/free-vector/vector"></a>
+  </head>
+  <body>
+    <!--Navbar Section-->
+    <nav class="navbar">
+      <a href="" class="navbar__logo">Eighth Note Lyrics</a>
+      <div class="navbar__bars">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="navbar__menu">
+        <a href="trendingsongs.html" class="navbar__menu--links"
+          >Trending Songs</a
+        >
+        <a href="signout.html" class="navbar__menu--links" id="button__signup"
+          >Sign Out</a
+        >
+      </div>
+    </nav>
+    <div>
+      <h2 id="header">Trending Artists</h2>
+    </div>
+    <div class="row">
+      <div class="column">
+        <img
+          src="./Resources/lyricphoto_one.JPG"
+          alt="various artists"
+          usemap="#image-map"
+        />
+      </div>
+      <map name="image-map">
+        <area
+          target=""
+          alt="Biggie Smalls"
+          title="Biggie Smalls"
+          href="https://en.wikipedia.org/wiki/The_Notorious_B.I.G."
+          coords="6,4,106,128"
+          shape="rect"
+        />
+        <area
+          target=""
+          alt="T.I."
+          title="T.I."
+          href="https://en.wikipedia.org/wiki/T.I."
+          coords="118,6,217,128"
+          shape="rect"
+        />
+        <area
+          target=""
+          alt="Nicki Minaj"
+          title="Nicki Minaj"
+          href="https://en.wikipedia.org/wiki/Nicki_Minaj"
+          coords="9,139,105,259"
+          shape="rect"
+        />
+        <area
+          target=""
+          alt="Kendrick Lamar"
+          title="Kendrick Lamar"
+          href="https://en.wikipedia.org/wiki/Kendrick_Lamar"
+          coords="231,10,330,122"
+          shape="rect"
+        />
+        <area
+          target=""
+          alt="Megan Thee Stallion"
+          title="Megan Thee Stallion"
+          href="https://en.wikipedia.org/wiki/Megan_Thee_Stallion"
+          coords="121,144,217,252"
+          shape="rect"
+        />
+        <area
+          target=""
+          alt="Lil Kim"
+          title="Lil Kim"
+          href="https://en.wikipedia.org/wiki/Lil%27_Kim"
+          coords="230,137,326,251"
+          shape="rect"
+        />
+      </map>
+      <div class="column">
+        <img src="./Resources/lyricphoto_two.JPG" alt="various artists" />
+      </div>
+      <div class="column">
+        <img src="./Resources/lyricphoto_three.JPG" alt="various artists" />
+      </div>
+      <div class="column">
+        <img src="./Resources/lyricphoto_four.JPG" alt="various artists" />
+      </div>
+    </div>
+    <div class="searchBox">
+      <h2 id="header">Search for your favorite songs</h2>
+      <input id="titleSearchBar" type="text" placeholder="title" />
+
+      <input id="artistSearchBar" type="text" placeholder="artist" />
+
+      <button id="search" onclick="findlyrics()">Search</button>
+    </div>
+    <div id="output"></div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      function findlyrics() {
+        $.get(
+          'https://api.lyrics.ovh/v1/' +
+            document.getElementById('artistSearchBar').value +
+            '/' +
+            document.getElementById('titleSearchBar').value,
+          function (data) {
+            document.getElementById('output').innerHTML = data.lyrics.replace(
+              new RegExp('\n', 'g'),
+              '<br>'
+            );
+          }
+        );
+      }
+    </script>
+    <footer id="footer">Copyright 2021 Eighth Note Lyrics</footer>
+  </body>
+</html>

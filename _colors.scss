@@ -1,0 +1,15 @@
+$primaryColor: rgba(1, 163, 218, 255);
+$secondaryColor: rgba(86, 42, 122, 255);
+$titleFont: 'Pacifico', cursive;
+
+//media-queries
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 280px) {
+    @content;
+  }
+}

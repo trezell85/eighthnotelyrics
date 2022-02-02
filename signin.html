@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="signin.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Navbar Section-->
+    <nav class="navbar">
+      <a href="" class="navbar__logo">Eighth Note Lyrics</a>
+      <div class="navbar__bars">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+    <section>
+      <img
+        class="loginPic"
+        src="./Resources/headphones_002.png"
+        alt="headphones"
+      />
+    </section>
+    <div class="box">
+      <div class="signinDiv">
+        <form id="form" class="loginForm">
+          <h1>Sign In</h1>
+          <div id="signIn-error" class="error-hint"></div>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="inputBox"
+            placeholder="Enter Email"
+          />
+          <br />
+          <input
+            type="password"
+            class="inputBox"
+            id="password"
+            placeholder="Enter Password"
+          />
+          <br />
+          <button type="submit" id="signIn-btn" class="button">Sign In</button>
+          <br />
+          <hr />
+          <p>
+            <a class="formLink" id="linkLogin"
+              >Don't have an account yet? Sign up.</a
+            >
+          </p>
+        </form>
+      </div>
+      <div class="signupDiv hidden">
+        <form id="formSignUp" class="createAccountForm">
+          <h1>Sign Up</h1>
+          <div id="signUp-error" class="error-hint"></div>
+          <input
+            type="text"
+            name="email"
+            class="inputBox"
+            id="emailSignUp"
+            placeholder="Enter Email"
+          />
+          <br />
+          <input
+            type="password"
+            class="inputBox"
+            id="passwordSignUp"
+            placeholder="Enter Password"
+          />
+          <br />
+          <input
+            type="password"
+            class="inputBox"
+            id="confirmpass"
+            placeholder="Confirm Password"
+          />
+          <br />
+          <br />
+          <hr />
+          <p>
+            <span><input type="checkbox"</span>I agree to the terms of services.
+          </p>
+          <button type="submit" class="button">Sign Up</button>
+          <p>
+            <a class="formLink" id="linkCreateAccount"
+              >Already have an account? Sign in.</a
+            >
+          </p>
+        </form>
+      </div>
+    </div>
+    <footer id="footer">Copyright 2021 Eighth Note Lyrics</footer>
+    <script type="text/javascript" src="signin.js"></script>
+  </body>
+</html>

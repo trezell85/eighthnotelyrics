@@ -1,0 +1,78 @@
+#navbar {
+  background-color: rgba(86, 42, 122, 255);
+}
+#header {
+  text-align: center;
+  height: 41px;
+  font-size: 50px;
+  font-family: 'Pacifico', cursive;
+  color: white;
+  margin-bottom: 50px;
+}
+
+img {
+  border-radius: 5px;
+  border-color: black;
+  display: flex;
+  position: relative;
+  width: 300px;
+  max-width: 100%;
+  margin-top: 20px;
+  margin-left: 75px;
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+.row::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+body {
+  background-color: rgba(1, 163, 218, 255);
+}
+h2 {
+  color: rgba(86, 42, 122, 255);
+}
+.searchBox {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+#artistSearchBar {
+  border-radius: 5px;
+  font-size: 25px;
+  width: 25%;
+  height: 30px;
+  margin-bottom: 25px;
+  margin-left: 75px;
+}
+#titleSearchBar {
+  border-radius: 5px;
+  font-size: 25px;
+  width: 25%;
+  height: 30px;
+  margin-bottom: 25px;
+  margin-left: 75px;
+}
+#search {
+  border-radius: 5px;
+  width: 7%;
+  height: 40px;
+  font-size: 25px;
+}
+footer {
+  color: black;
+  background-color: rgba(86, 42, 122, 255);
+  font-size: 20px;
+  width: 100%;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
